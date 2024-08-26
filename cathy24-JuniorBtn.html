@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      position: relative;
+    }
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    .wrapper {
+      height: 100%;
+      background-color: #333;
+    }
+    .btn {
+      color: #fff;
+      text-decoration: none;
+      font-family: 微軟正黑體;
+      border: 1px solid #ff1965;
+      background-color: #ff1965;
+      padding: 10px 30px;
+      /* display: inline-block;有寫position display就沒有用 */
+      line-height: 24px;
+      border-radius: 22px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .btn:before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      padding-top: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <a href="#" class="btn"><span>button</span></a>
+    </div>
+  </body>
+</html>
