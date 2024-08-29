@@ -43,6 +43,7 @@
       transform: translate(-50%, -50%);
       animation: ballup 2s both, balldown 2s 2s forwards ease-in,
         cameraIn 1s 4s forwards;
+      perspective: 500px;
     }
     @keyframes cameraIn {
       0% {
@@ -122,17 +123,26 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      animation: flash 0.5s 6s both;
     }
 
-    @keyframes flashLightOut {
+    @keyframes flash {
       0% {
         opacity: 0;
       }
+      25% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
 
-      80% {
+      75% {
+        opacity: 1;
       }
 
       100% {
+        opacity: 0;
       }
     }
 
@@ -163,12 +173,153 @@
         height: 5px;
       }
     }
+
+    .pic {
+      width: 250px;
+      height: 250px;
+      border: 10px solid#fff;
+      background-color: #ccc;
+      border-bottom: 20px solid #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: picIn 1s 6.5s backwards, picFlip 1s 7.5s;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .pic:hover {
+      width: 400px;
+      height: 400px;
+      background-color: #fff;
+      border: 0;
+      padding: 20px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .imgBox img {
+      width: 100%;
+    }
+
+    .imgBox {
+      animation: showImg 0.5s 8.5s backwards;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .text h1,
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 40px;
+      color: #333;
+    }
+
+    .text {
+      opacity: 0;
+
+      transform: translateX(-20%);
+    }
+
+    .pic:hover .text {
+      opacity: 1;
+      transform: translateX(0%);
+      transition: all 1s 0.3s;
+    }
+
+    @keyframes showImg {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes picIn {
+      0% {
+        height: 0;
+        width: 120px;
+        position: absolute;
+        top: 100%;
+        transform: translate(-50%, 0%);
+        opacity: 0;
+      }
+      100% {
+        height: 120px;
+        width: 120px;
+        top: 100%;
+        transform: translate(-50%, 0%);
+
+        opacity: 1;
+      }
+    }
+
+    @keyframes picFlip {
+      0% {
+        width: 120px;
+        height: 120px;
+        top: 100%;
+        opacity: 1;
+        transform: translate(-50%, 0%) rotateX(0deg);
+      }
+      100% {
+        width: 250px;
+        height: 250px;
+        transform: translate(-50%, -50%) rotateX(360deg);
+      }
+    }
+
+    .mouse {
+      width: 25px;
+      height: 25px;
+
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: mouseHover 1.5s 9s backwards infinite;
+      opacity: 0;
+      background: url(pic/pointer.svg);
+      background-size: cover;
+    }
+
+    @keyframes mouseHover {
+      0% {
+        top: 150%;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        /* opacity: 0; */
+        top: 60%;
+      }
+    }
+    .pic:hover ~ .mouse {
+      visibility: hidden;
+    }
   </style>
   <body>
     <div class="wrap">
       <div class="camera">
         <div class="lens"></div>
         <div class="flashLight"></div>
+        <div class="pic">
+          <div class="imgBox">
+            <img src="pic/example.webp" alt="" />
+          </div>
+          <div class="text">
+            <h1>hello</h1>
+            <h2>This is my memory</h2>
+          </div>
+        </div>
+        <div class="mouse"></div>
       </div>
     </div>
   </body>
