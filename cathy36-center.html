@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outter {
+        height: 300px;
+        border: 1px solid black;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #68a2ff;
+      }
+      .box1 {
+        margin: 0 auto;
+      }
+
+      .outter2 {
+        text-align: center;
+      }
+
+      .outter2 .box {
+        display: inline-block;
+        text-align: left;
+      }
+
+      .outter3 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .outter4 {
+        position: relative;
+      }
+      .outter4 .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .box5 {
+        text-align: center;
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>margin: 0 auto; 的置中方式</h2>
+    <div class="outter">
+      <div class="box box1">讓我置中,拜託</div>
+    </div>
+
+    <h2>inline-block , inline 行內元素的置中方式</h2>
+    <div class="outter outter2">
+      <div class="box">讓我置中,拜託</div>
+    </div>
+
+    <h2>flex 彈性排版的置中方式</h2>
+    <div class="outter outter3">
+      <div class="box">讓我置中,拜託</div>
+    </div>
+
+    <h2>position : absolute 絕對定位的置中方式</h2>
+    <div class="outter outter4">
+      <div class="box">讓我置中,拜託</div>
+    </div>
+
+    <h2>文字的置中</h2>
+    <div class="outter">
+      <div class="box box5">讓我置中,拜託</div>
+    </div>
+  </body>
+</html>

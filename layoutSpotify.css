@@ -1,0 +1,90 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial;
+}
+
+.container {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #999;
+  padding: 0 15px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.col-1-2,
+.col-1-3 {
+  float: left;
+
+  border: 1px solid #000;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-3 {
+  width: 33.33333%;
+}
+
+.col-1-2 .album-art {
+  float: left;
+  width: 50%;
+}
+.col-1-2 .album-art .element {
+  height: 300px;
+}
+
+.whatsOn {
+  background-color: #fff;
+}
+.element {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.givePadding {
+  padding-top: 150px;
+  padding-bottom: 180px;
+}
+
+.main-bg {
+  background: linear-gradient(50deg, #ff4169 0, #7c26f8 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.navbar .element {
+  height: 80px;
+}
+
+/*jumbotron*/
+.jumbotron {
+  border: 1px solid #000;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.jumbotron .element {
+  height: 500px;
+}
