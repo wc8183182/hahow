@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      position: relative;
+    }
+    .imgBox-fit {
+      border: 1px solid #000;
+      width: 400px;
+      height: 400px;
+    }
+    .imgBox-fit .image {
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <body>
+    <div class="imgBox-fit">
+      <img class="image" src="pic/example1.jpg" alt="" />
+    </div>
+  </body>
+</html>
