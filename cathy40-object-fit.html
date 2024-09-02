@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .imgbox {
+      border: 1px solid #000;
+      width: 400px;
+      overflow: hidden;
+    }
+    .imgbox-inner {
+      width: 100%;
+      padding-top: 100%;
+      height: 0;
+    }
+    .image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 100%;
+      max-width: 100%;
+    }
+  </style>
+  <body>
+    <div class="imgbox">
+      <div class="imgbox-inner">
+        <img class="image" src="pic/example1.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="imgbox">
+      <div class="imgbox-inner">
+        <img class="image" src="pic/example2.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

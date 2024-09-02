@@ -10,20 +10,37 @@
       box-sizing: border-box;
       position: relative;
     }
+
+    .imgBox {
+      width: 30%;
+    }
+    .imgBox-inner {
+      width: 100%;
+      padding-top: 75%;
+      border: 1px solid red;
+    }
     .imgBox-fit {
       border: 1px solid #000;
-      width: 400px;
-      height: 400px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     .imgBox-fit .image {
       width: 100%;
-      object-fit: cover;
+      object-fit: right;
+      height: inherit;
     }
   </style>
 
   <body>
-    <div class="imgBox-fit">
-      <img class="image" src="pic/example1.jpg" alt="" />
+    <div class="imgBox">
+      <div class="imgBox-inner">
+        <div class="imgBox-fit">
+          <img class="image" src="pic/example1.jpg" alt="" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
