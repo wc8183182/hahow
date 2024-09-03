@@ -13,14 +13,98 @@
     body {
       font-family: Arial;
     }
+    .cardContainer {
+      width: 100%;
+      /* height: 300px; */
+      border: 1px solid #000;
+    }
+
+    .imgbox {
+      display: block;
+    }
+
+    .imgbox-inner {
+      width: 100%;
+      padding-top: 75%;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .infoContainer {
+      padding-top: 8px;
+      font-size: 15px;
+      line-height: 18px;
+      color: #484848;
+      letter-spacing: 0.2px;
+    }
+    .roomName {
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .detail {
+      font-weight: 300;
+    }
+
+    .starIcon {
+      display: inline-block;
+      vertical-align: top;
+      width: 12px;
+      height: 12px;
+      /* border: 1px solid #000; */
+      background-image: url("pic/star.svg");
+      background-position: center;
+      background-size: cover;
+      margin-right: 3px;
+    }
+    .starRatingContainer {
+      margin-top: 4px;
+    }
+    .comment {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      vertical-align: top;
+    }
+    .u-block {
+      display: block;
+    }
   </style>
   <body>
     <div class="wrap">
       <div class="cardContainer">
         <div class="imgbox">
-          <div class="imgbox-inner">
-            <div class="imgage"></div>
-          </div>
+          <a href="#" class="u-block">
+            <div class="imgbox-inner">
+              <div
+                class="image"
+                style="background-image: url('pic/example1.jpg')"
+              ></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="infoContainer">
+          <a href="#" class="u-block">
+            <div class="roomName">$2,071 TWD I SETTE CONI -TRULLO EDERA</div>
+            <div class="detail">整套房子／公寓‧2張床</div>
+            <div class="starRatingContainer">
+              <span class="starIcon"></span><span class="starIcon"></span
+              ><span class="starIcon"></span><span class="starIcon"></span
+              ><span class="starIcon"></span>
+              <div class="comment">79則評論</div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

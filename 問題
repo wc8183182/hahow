@@ -1,0 +1,7 @@
+41章
+Q:為什麼要調整圖片不能用
+object-fit :cover
+object-position :center
+而是用
+background-size: cover;
+background-position: center;
