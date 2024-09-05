@@ -36,7 +36,11 @@ ul {
 .navbar .logo {
   float: left;
   height: 24px;
-  border: 1px solid #fff;
+  margin-top: 28px;
+}
+
+.navbar .logo img {
+  height: 100%;
 }
 
 .menu {
@@ -52,6 +56,10 @@ ul {
   padding: 28px 16px;
   margin-right: 4px;
 }
+
+.menu > li > a.avtivity:after {
+  width: 100%;
+}
 .menu > li > a:after {
   content: "";
   position: absolute;
@@ -66,4 +74,31 @@ ul {
 
 .menu > li:hover > a:after {
   width: 100%;
+}
+
+.menu .dropdown > li > a {
+  display: block;
+  line-height: 24px;
+  padding: 8px 24px;
+  color: #fff;
+  width: 200px;
+  transition: all 0.2s;
+}
+
+.menu .dropdown {
+  position: absolute;
+  left: 50%;
+  top: 105%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0px;
+  background-color: #3a3a3a;
+  transition: all 0.9s;
+}
+.menu > li:hover > .dropdown {
+  width: 200px;
+  top: 100%;
+}
+.dropdown a:hover {
+  background-color: #ff5e41;
 }
