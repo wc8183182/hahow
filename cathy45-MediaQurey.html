@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .col {
+      float: left;
+      width: 33.3333%;
+      height: 300px;
+      background-color: #66a0ff;
+      border: 1px solid #d6e5ff;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+
+    @media screen and (min-width: 768px) {
+      .col {
+        width: 50%;
+      }
+    } /*最大螢幕寬度到768時 寬度變50%*/
+
+    @media screen and (min-width: 1040px) {
+      .col {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </body>
+</html>
